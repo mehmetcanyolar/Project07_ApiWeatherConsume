@@ -164,7 +164,7 @@ if (number == "5")
 
 if (number == "6")
 {
-    string url = "'https://localhost:7219/api/Weathers/GetByIdWeatherCity?id=";
+    string url = "https://localhost:7219/api/Weathers/GetByIdWeatherCity?id=";
     Console.Write("Bilgilerini getirmek istediğiniz şehrin id değeri: ");
     
         int id = int.Parse(Console.ReadLine());
@@ -174,8 +174,10 @@ if (number == "6")
     {
         HttpResponseMessage httpResponseMessage = await client.GetAsync(url+id);
         httpResponseMessage.EnsureSuccessStatusCode();
+
         string responseBody = await httpResponseMessage.Content.ReadAsStringAsync();
         JObject weatherCityObject = JObject.Parse(responseBody);
+
         string cityName = weatherCityObject["cityName"].ToString();
         string country = weatherCityObject["country"].ToString();
         string detail = weatherCityObject["detail"].ToString();
