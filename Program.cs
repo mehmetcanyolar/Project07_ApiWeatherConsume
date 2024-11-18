@@ -185,7 +185,7 @@ if (number == "6")
 
         Console.WriteLine("Girmiş olduğunuz id değerine ait bilgiler");
         Console.WriteLine();
-        Console.Write("Şehir: " + cityName + "Ülke: " + country + "Detay: " + detail + "Sıcaklık: " + temperature);
+        Console.Write("Şehir: " + cityName + "/  Ülke: " + country + "/  Detay: " + detail + "/  Sıcaklık: " + temperature);
     }
 }
 
